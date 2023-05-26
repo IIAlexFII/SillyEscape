@@ -26,6 +26,7 @@ public class PressurePlates : MonoBehaviour
         {
             isPressed = true;
             ActivateTarget();
+            print("It is pressed");
         }
     }
 
@@ -35,6 +36,7 @@ public class PressurePlates : MonoBehaviour
         {
             isPressed = false;
             DeactivateTarget();
+            print("Not pressed");
         }
     }
 
