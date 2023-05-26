@@ -4,9 +4,9 @@
     "com.valvesoftware.unity.openvr": {
       "tarball": {
         "hash": "3ee6c452bc34",
-        "mtime": 1685018881201,
+        "mtime": 1685018858522,
         "size": 16210619,
-        "localPath": "D:\\_3rd year\\6th semester\\VR\\SillyEscape\\sillyescape\\Assets\\SteamVR\\OpenVRUnityXRPackage\\Editor\\com.valvesoftware.unity.openvr-1.1.4.tgz"
+        "localPath": "C:\\UnityProjects\\Erasmus\\SillyEscape\\sillyescape\\Assets\\SteamVR\\OpenVRUnityXRPackage\\Editor\\com.valvesoftware.unity.openvr-1.1.4.tgz"
       }
     }
   }
