@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class PressurePlates : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public GameObject[] targetObject;  // The object that should be activated when the plate is pressed
+
+    [SerializeField]
+    private bool isInverted;  // Flag to track if the plate is pressed
+
+    private void Awake() {
+        if(isInverted == true)
+        {
+            foreach (GameObject item in targetObject)
+            {
+                item.SetActive(false);
+            }
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public GameObject targetObject;  // The object that should be activated when the plate is pressed
-
-    private bool isPressed = false;  // Flag to track if the plate is pressed
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("HeavyObject")) //make sure the object has this tag
         {
-            isPressed = true;
             ActivateTarget();
             print("Is Pressed");
         }
@@ -34,7 +33,6 @@ public class PressurePlates : MonoBehaviour
     {
         if (other.CompareTag("HeavyObject")) //make sure the object has this tag
         {
-            isPressed = false;
             DeactivateTarget();
             print("Not Pressed");
         }
@@ -42,11 +40,42 @@ public class PressurePlates : MonoBehaviour
 
     private void ActivateTarget()
     {
-        targetObject.SetActive(true);  // Activate the target object when the plate is pressed
+        // Activate the target object when the plate is pressed
+        if (isInverted == false)
+        {
+            foreach (GameObject item in targetObject)
+            {
+                item.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject item in targetObject)
+            {
+                item.SetActive(true);
+            }
+        }
+
+
     }
+
 
     private void DeactivateTarget()
     {
-        targetObject.SetActive(false);  // Deactivate the target object when the plate is released
+        // Deactivate the target object when the plate is released
+        if (isInverted == false)
+        {
+            foreach (GameObject item in targetObject)
+            {
+                item.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject item in targetObject)
+            {
+                item.SetActive(false);
+            }
+        }
     }
 }
