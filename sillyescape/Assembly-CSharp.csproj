@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\ShowControllers.cs" />
      <Compile Include="Assets\XRPlatformControllerSetup.cs" />
      <Compile Include="Assets\Scripts\PressurePlates.cs" />
+     <Compile Include="Assets\Scripts\ObjectReset.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\UnityProjects\EngineInstalls\2021.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
