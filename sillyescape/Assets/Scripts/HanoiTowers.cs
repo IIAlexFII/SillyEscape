@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class HanoiTowers : MonoBehaviour
 {
-    public int discCount = 5;
+    public List<GameObject> discs;
     
-    public List<HanoiDisc>[] Poles { get; } = { new List<HanoiDisc>(), new List<HanoiDisc>(), new List<HanoiDisc>() };
+    public Stack<GameObject>[] Poles { get; } = { new Stack<GameObject>(), new Stack<GameObject>(), new Stack<GameObject>() };
     public bool IsSolved { get; private set; } = false;
+
+    public void OnPoleStateChange() {
+        if (Poles[^1].Count == discs.Count) CompletePuzzle();
+    }
     
 
     public void CompletePuzzle()
     {
         IsSolved = true;
         Debug.Log("Towers of Hanoi puzzle completed!");
+    }
+
+    public void ResetPuzzle()
+    {
+        Debug.Log("Here, the puzzle would reset");
     }
 }
