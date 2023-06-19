@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ColorRetriever.cs" />
     <Compile Include="Assets\Scripts\ShowControllers.cs" />
     <Compile Include="Assets\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\Scripts\PressurePlates.cs" />
     <Compile Include="Assets\Scripts\ObjectReset.cs" />
-    <Compile Include="Assets\Scripts\ColorRetriever.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
