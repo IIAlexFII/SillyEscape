@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.sillyescape.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\studmin\\Desktop\\sillyescape\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\UnityProjects\\Erasmus\\SillyEscape\\sillyescape\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "sillyescape [Testing]"
